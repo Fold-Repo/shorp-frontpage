@@ -1,0 +1,219 @@
+@import url('https://fonts.cdnfonts.com/css/lexend');
+@import url('https://fonts.cdnfonts.com/css/black-han-sans');
+
+@import "tailwindcss";
+
+@plugin "tailwindcss-debug-screens";
+@plugin './hero.mts';
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+/* ================= Light Theme (default) ================= */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+
+  /* FONTS */
+  --font-sans: 'Lexend', sans-serif;
+  --font-black_han: 'Black Han Sans', sans-serif;
+
+  /* TEXT SIZES */
+  --text-xs: 0.78125rem;
+  /* 12.5px */
+  --text-sm: 0.84375rem;
+  /* 13.5px */
+  --text-base: 0.9375rem;
+  /* 15px */
+  --text-lg: 1.125rem;
+  /* 18px */
+  --text-xl: 1.25rem;
+  /* 20px */
+  --text-2xl: 1.5rem;
+  /* 24px */
+  --text-3xl: 1.875rem;
+  /* 30px */
+  --text-4xl: 2.25rem;
+  /* 36px */
+  --text-5xl: 3rem;
+  /* 48px */
+
+  /* Base surface tokens */
+  --background: #F9F9F9;
+  --foreground: #1A1A1A;
+}
+
+/* ================= Dark Theme (with .dark class) ================= */
+.dark {
+  --background: #030712;
+  --foreground: #ededed;
+}
+
+/* ================= Tailwind Theme Tokens ================= */
+@theme {
+  /* ================= POS SaaS Brand (Purple) ================= */
+  --color-brand-50: #F5F3FF;
+  --color-brand-100: #EDE9FE;
+  --color-brand-200: #DDD6FE;
+  --color-brand-300: #C4B5FD;
+  --color-brand-400: #A78BFA;
+  --color-brand-500: #8B5CF6;
+  /* Lilac */
+  --color-brand-600: #7C3AED;
+  --color-brand-700: #6D28D9;
+  --color-brand-800: #5B21B6;
+  /* Deep Purple */
+  --color-brand-900: #4C1D95;
+  --color-brand-950: #2E1065;
+
+  /* ================= POS SaaS CTA (Yellow) ================= */
+  --color-cta-100: #FEF9C3;
+  --color-cta-200: #FEF08A;
+  --color-cta-300: #FDE047;
+  --color-cta-400: #FACC15;
+  --color-cta-500: #EAB308;
+  /* Golden Yellow */
+  --color-cta-600: #CA8A04;
+  --color-cta-700: #A16207;
+
+  /* ================= Neutrals (Gray) ================= */
+  --color-neutral-100: #F9F9F9;
+  /* Page background */
+  --color-neutral-200: #E0E0E0;
+  /* Borders & dividers */
+  --color-neutral-300: #BDBDBD;
+  /* Disabled state */
+  --color-neutral-400: #828282;
+  /* Placeholder text */
+  --color-neutral-500: #4F4F4F;
+  /* Secondary text */
+  --color-neutral-600: #333333;
+  --color-neutral-700: #1A1A1A;
+  /* Primary text */
+  --color-neutral-800: #0A0A0A;
+  /* Headlines */
+  --color-neutral-900: #000000;
+
+  /* ================= System ================= */
+  --color-success: #28A745;
+  --color-error: #DC3545;
+  --color-warning: #FFC107;
+  /* Re-use action-400 */
+
+  /* ================= Surfaces ================= */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* ================= Fonts ================= */
+  --font-sans: var(--font-sans);
+  --font-black_han: var(--font-black_han);
+
+  /* ================= Text Sizes ================= */
+  --text-xs: var(--text-xs);
+  --text-sm: var(--text-sm);
+  --text-base: var(--text-base);
+  --text-lg: var(--text-lg);
+  --text-xl: var(--text-xl);
+  --text-2xl: var(--text-2xl);
+  --text-3xl: var(--text-3xl);
+  --text-4xl: var(--text-4xl);
+  --text-5xl: var(--text-5xl);
+
+  /* ================= Custom Shadows ================= */
+  --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+/* ================= Base Body ================= */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: var(--text-base);
+}
+
+/* ================= Container ================= */
+.container {
+  @apply w-full mx-auto px-5 lg:px-14 max-w-screen-sm sm:max-w-3xl md:max-w-5xl lg:max-w-7xl xl:max-w-screen-2xl;
+}
+
+
+/* ================= Utilities ================= */
+.bg-gradient-purple {
+  background: linear-gradient(135deg, var(--color-brand-800) 0%, var(--color-brand-600) 100%);
+}
+
+.bg-gradient-lilac {
+  background: linear-gradient(135deg, var(--color-brand-100) 0%, var(--color-brand-50) 100%);
+}
+
+.text-gradient-purple {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-800 to-brand-600;
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.card-lilac {
+  @apply bg-brand-50 border border-brand-100 rounded-2xl p-6 transition-all duration-300;
+}
+
+.card-lilac:hover {
+  box-shadow: var(--shadow-soft);
+}
+
+/* ================= Components ================= */
+@layer components {
+
+  /* ================= Forms ================= */
+  .form-group {
+    @apply mb-2
+  }
+
+  .form-control {
+    @apply block w-full px-3 py-2.5 md:py-3 text-[13px] border border-neutral-200 bg-white rounded-lg outline-none transition-colors duration-300 text-neutral-700 placeholder:text-neutral-500;
+  }
+
+  .form-control:focus {
+    @apply border-success ring-2 ring-success/25;
+  }
+
+  .form-control.is-invalid {
+    @apply border-error ring-1 ring-error/15;
+  }
+
+  .form-label {
+    @apply block mb-1 text-sm text-neutral-400;
+  }
+
+  select.form-control {
+    @apply appearance-none;
+  }
+
+  textarea.form-control {
+    @apply min-h-[120px] resize-y;
+  }
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 15s linear infinite;
+  width: max-content;
+}
