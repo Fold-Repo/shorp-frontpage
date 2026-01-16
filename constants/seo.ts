@@ -1,42 +1,42 @@
-export const SITE_URL = 'https://test-tube.com';
+export const SITE_URL = 'https://shorp.com';
 
-export const SEO_TITLE = 'Test Tube — Exam Prep & Learning';
+export const SEO_TITLE = 'Shorp — Modern Point of Sale System';
 
 export const SEO_DESCRIPTION =
-    'Test Tube is an educational platform for learning and exam preparation across JAMB, WAEC, and other tests. Practice questions, study resources, and guided prep to help learners succeed.';
+    'Shorp is a modern point of sale (POS) system designed to streamline your business operations. Manage sales, inventory, payments, and more with our intuitive POS software.';
 
 export const APP_KEYWORDS = [
-    'Test Tube',
-    'exam prep',
-    'learning platform',
-    'practice questions',
-    'JAMB',
-    'WAEC',
-    'NECO',
-    'study resources',
-    'education',
-    'test preparation',
-    'mock exams',
-    'revision',
+    'Shorp',
+    'POS system',
+    'point of sale',
+    'POS software',
+    'retail management',
+    'inventory management',
+    'payment processing',
+    'business software',
+    'EPOS',
+    'sales management',
+    'retail POS',
+    'modern POS',
 ];
 
-export const APP_AUTHORS = [{ name: 'Test Tube' }];
+export const APP_AUTHORS = [{ name: 'Shorp' }];
 
 export const APP_OPEN_GRAPH = {
-    title: 'Test Tube — Exam Prep & Learning',
+    title: 'Shorp — Modern Point of Sale System',
     description:
-        'Test Tube is an educational platform for learning and exam preparation across JAMB, WAEC, NECO, and other tests. Practice questions, study resources, and guided prep to help learners succeed.',
+        'Shorp is a modern point of sale (POS) system designed to streamline your business operations. Manage sales, inventory, payments, and more with our intuitive POS software.',
     url: SITE_URL,
-    siteName: 'Test Tube',
+    siteName: 'Shorp',
     locale: 'en_US',
     type: 'website',
 };
 
 export const APP_TWITTER = {
     card: 'summary_large_image',
-    title: 'Test Tube — Exam Prep & Learning',
+    title: 'Shorp — Modern Point of Sale System',
     description:
-        'Test Tube helps students prepare for JAMB, WAEC, NECO and other exams with practice questions, study resources, and guided prep.',
+        'Shorp is a modern POS system that helps businesses manage sales, inventory, and payments with ease. Streamline your operations with our intuitive point of sale software.',
 };
 
 export const APP_ROBOTS = { index: true, follow: true };

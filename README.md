@@ -1,6 +1,6 @@
-## Test Tube — Exam Prep Platform
+## Shorp — POS Landing Page
 
-Next.js + HeroUI app for learning and exam preparation (JAMB/WAEC/NECO). Includes reusable UI components, Redux Toolkit with persistence, and a component catalog at `/components`.
+Next.js + HeroUI landing page for Shorp, a modern point of sale (POS) system. Includes reusable UI components, Redux Toolkit with persistence, and a component catalog at `/components`.
 
 ---
 
@@ -25,7 +25,7 @@ Env: create `.env.local` as needed (none required for basic run).
 - `components/reusable` — Opinionated pieces (SearchInput, Pagination, TableComponent).
 - `store/` — Redux Toolkit + redux-persist (session). `app` slice placeholder ready for features.
 - `hooks/` — Reusable React hooks.
-- `constants/seo.ts` — SEO/meta defaults for Test Tube.
+- `constants/seo.ts` — SEO/meta defaults for Shorp.
 
 ### Component catalog
 Browse live usage and code snippets at `/components`:
